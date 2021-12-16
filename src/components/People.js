@@ -9,7 +9,6 @@ class People extends React.Component {
         this.state={
             data:[],
             person:"",
-            clicked: false
         }
     }
 
@@ -19,13 +18,13 @@ const URL = "https://ghibliapi.herokuapp.com/people"
     fetch (URL)
     .then((response) => response.json())
     .then((data) => {
-    this.setState({data: data})
+    this.setState({ data: data })
     })
 }
 
 
 
-handleSearch = (e)=> {
+handleChange = (e)=> {
     e.preventDefault()
         this.setState({
             person: e.target.value
@@ -66,8 +65,8 @@ return (
         <div className='people'>
             <h2>Search for a Person</h2>
             <form onSubmit={this.handleSubmit}>
-            <input  onChange={this.handleSearch}  id="values" name="search-person" type="text" />
-            <button onClick={this.clicked}>Submit</button>
+            <input  onChange={this.handleChange}  id="values" name="search-person" type="text" />
+            <button type="submit">Submit</button>
             </form>
             {personInfo}
         </div>
