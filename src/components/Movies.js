@@ -18,6 +18,8 @@ componentDidMount() {
     .then((data) => this.setState({movies: data }))
 }
 
+
+
 handleDropdownChange = (event) => {
     
     let currentMovieObject = this.state.movies.find((movie) => {
@@ -27,6 +29,8 @@ handleDropdownChange = (event) => {
     selectedMovie: currentMovieObject,
     })
 }
+
+
 
 
 render() {

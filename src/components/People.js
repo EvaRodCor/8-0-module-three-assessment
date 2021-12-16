@@ -31,6 +31,8 @@ handleChange = (e)=> {
         })
     }
 
+
+
 handleSubmit = (e) => {
     e.preventDefault()
     fetch (URL)
@@ -57,8 +59,6 @@ render () {
             }
             return "Not Found"
         })
-
-
 
 return (
 
