@@ -4,11 +4,10 @@ import '../App.css';
 
 class People extends React.Component {
 
-
     constructor() {
         super()
         this.state={
-            data:"",
+            data:[],
             person:"",
             clicked: false
         }
@@ -16,8 +15,8 @@ class People extends React.Component {
 
 
 componentDidMount(){
-
-    fetch ("https://ghibliapi.herokuapp.com/people")
+const URL = "https://ghibliapi.herokuapp.com/people"
+    fetch (URL)
     .then((response) => response.json())
     .then((data) => {
     this.setState({data: data})
@@ -35,7 +34,7 @@ handleSearch = (e)=> {
 
 handleSubmit = (e) => {
     e.preventDefault()
-    fetch ("https://ghibliapi.herokuapp.com/people")
+    fetch (URL)
     .then((response) => response.json())
     .then((data) => {
     this.setState({

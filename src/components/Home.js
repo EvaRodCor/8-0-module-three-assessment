@@ -2,17 +2,17 @@ import React from "react";
 import "../App.css";
 
 class Home extends React.Component {
-  constructor(props) {
+constructor(props) {
     super(props);
     this.state = {  }
-  }
-  render() { 
+}
+render() { 
     return ( 
-      <div className="Home">
+    <div className="Home">
         <h2> Welcome to GhibliApp </h2>
-      </div>
-    );
-  }
+    </div>
+        );
+    }
 }
 
 export default Home;
