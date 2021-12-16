@@ -15,8 +15,7 @@ componentDidMount() {
     fetch(URL)
     .then((response) => response.json())
     .then((data) => this.setState({locations: data }))
-    
-    }
+}
 
     toggleButton = () => {
         this.setState({showLocations: !this.state.showLocations})
