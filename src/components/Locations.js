@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 
 class Locations extends React.Component {
+
 constructor() {
     super();
     this.state = { 
@@ -24,15 +25,17 @@ componentDidMount() {
 render() { 
 const locationDisplay = this.state.locations.map((location) => {
     return (
-        <div key={location.id}>
-        <h2>Name: {location.name}</h2>
-        <h2>Climate: {location.climate}</h2>
-        <h2>Terrain: {location.terrain}</h2>
+        <div className="locations"key={location.id}>
+            <li>
+            <h2>Name: {location.name}</h2>
+            <h2>Climate: {location.climate}</h2>
+            <h2>Terrain: {location.terrain}</h2>
+            </li>
         </div>
     )
 })
     return ( 
-    <div className="Locations">
+    <div className="locations">
         <h1>List of Locations</h1>
         <button onClick={this.toggleButton}>{!this.state.showLocations ? "Show Locations" : "Hide Locations"}</button>
         { this.state.showLocations ? locationDisplay : ''}

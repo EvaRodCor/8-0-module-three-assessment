@@ -37,17 +37,17 @@ render() {
     });
 
     return (
-    <main className="movie-container">
+    <main className="movies">
+
         <h1>This is the Movies page!!</h1>
         <select onChange={this.handleDropdownChange}>
         <option>Select a Movie</option>
         <option value=""></option>
         {dropDownOptions}
         </select>
-
         <div>
         {this.state.selectedMovie
-            ? ( <p>Title: {this.state.selectedMovie?.title}</p>)
+            ? ( <h1>Title: {this.state.selectedMovie?.title}</h1>)
             : null}{" "}
         </div>
         <div>
@@ -60,6 +60,7 @@ render() {
             ? ( <p>Description: {this.state.selectedMovie?.description}</p>)
             : null}{" "}
         </div>
+
     </main>
     );
 }
